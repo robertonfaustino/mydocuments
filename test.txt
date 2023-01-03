@@ -1,0 +1,7 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-logo="http://esrv.cc:80/images/aa3b36122c073f1a3a44cf93f62f4075.png" group-title="CANAIS | VARIEDADES",ANIMAL PLANET
+https://embed.googlez01.ml/playlist/03a362f8432f9c98e7e0849d20281e66/d97a1fe5e138fa7984e65b24021c849d/master.m3u8?token=RG95WG96M2JLNVI0VVVsUkVydHlRdz09OjrhI9bsAS4qJ6zCdy8EL76%2B|Referer=https://tv.tvembed3.ml/embed/6d488e36-7182-4a97-b554-7a778461bfd8
+
+#EXTINF:-1 tvg-logo="http://esrv.cc:80/images/fa7df80a1174273f0d4b9eeccc76af88.png" group-title="CANAIS | VARIEDADES",COMEDY CENTRAL
+https://embed.googlez01.ml/playlist/03a362f8432f9c98e7e0849d20281e66/30910bd6644c63554451da1b82a05a05/master.m3u8?token=RG95WG96M2JLNVI0VVVsUkVydHlRdz09OjrhI9bsAS4qJ6zCdy8EL76%2B|Referer=https://tv.tvembed3.ml/embed/c7902b1a-cfa1-4a68-91bb-e0f64d39bbad
