@@ -1,0 +1,38 @@
+<td style="min-width: 200px; text-align: center">
+              <button
+onclick="window.parent.bubble_fn_workflow(['This TABELA's unique id','dt-view']);"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Visualizar"
+                class="btn btn-primary btn-sm  dt-view"
+              >
+                <i class="fa-solid fa-eye"></i>
+              </button>
+              <button
+onclick="window.parent.bubble_fn_workflow(['This TABELA's unique id','dt-edit']);"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Editar"
+                class="btn btn-success btn-sm dt-edit"
+              >
+                <i class="fas fa-pencil-alt fa-fw"></i>
+              </button>
+              <button
+onclick="window.parent.bubble_fn_workflow(['This TABELA's unique id','dt-copy']);"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Duplicar"
+                class="btn btn-secondary btn-sm dt-copy"
+              >
+                <i class="fa-regular fa-copy"></i>
+              </button>
+              <button
+onclick="window.parent.bubble_fn_workflow(['This TABELA's unique id','dt-delete']);"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Deletar"
+                class="btn btn-danger btn-sm dt-delete"
+              >
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
