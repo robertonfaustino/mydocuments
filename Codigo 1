@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acervo ADB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .dataTables_wrapper {
+        font-family: Poppins;
+        font-size: 14px;
+      }
+
+      table.dataTable tbody td {
+        vertical-align: middle;
+        min-width: 100px;
+      }
+
+      div.dataTables_scrollBody {
+        margin-bottom: 20px;
+      }
+      div.dataTables_scrollHead {
+        margin-top: 20px;
+      }
+      div.dataTables_paginate {
+        float: right;
+        margin: 0px;
+      }
+      div.dataTables_length {
+        float: left;
+        margin: 0;
+      }
+      div.dt-buttons {
+        float: center;
+        margin: 0;
+        background-color: #f8f9fa;
+        padding: 10px;
+      }
+      div.dataTables_info {
+        float: center;
+        margin: 0;
+      }
+      div.dataTables_scrollFoot > div > table > tfoot {
+        background-color: #d6d6d6;
+      }
+    </style>
+    <style>
+      .dataTables_wrapper {
+        font-family: Poppins;
+        font-size: 14px;
+      }
+
+      table.dataTable tbody td {
+        vertical-align: middle;
+        min-width: 100px;
+      }
+
+      div.dataTables_paginate {
+        float: right;
+        margin: 0px;
+      }
+      div.dataTables_scrollBody {
+        margin-bottom: 20px;
+      }
+      div.dataTables_scrollHead {
+        margin-top: 20px;
+      }
+      div.dataTables_paginate {
+        float: right;
+        margin: 0px;
+      }
+      div.dataTables_length {
+        float: left;
+        margin: 0;
+      }
+      div.dt-buttons {
+        float: center;
+        margin: 0;
+        background-color: #f8f9fa;
+        padding: 10px;
+      }
+      div.dataTables_info {
+        float: center;
+        margin: 0;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.13.1/af-2.5.1/b-2.3.2/b-colvis-2.3.2/b-html5-2.3.2/b-print-2.3.2/cr-1.6.1/date-1.2.0/fc-4.2.1/fh-3.3.1/kt-2.8.0/r-2.4.0/rg-1.3.0/rr-1.3.1/sc-2.0.7/sb-1.4.0/sp-2.1.0/sl-1.5.0/sr-1.2.0/datatables.min.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.13.1/af-2.5.1/b-2.3.2/b-colvis-2.3.2/b-html5-2.3.2/b-print-2.3.2/cr-1.6.1/date-1.2.0/fc-4.2.1/fh-3.3.1/kt-2.8.0/r-2.4.0/rg-1.3.0/rr-1.3.1/sc-2.0.7/sb-1.4.0/sp-2.1.0/sl-1.5.0/sr-1.2.0/datatables.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/plug-ins/1.10.21/sorting/datetime-moment.js"
+    ></script>
+
+    <script src="https://kit.fontawesome.com/8a73498794.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/plug-ins/1.13.1/filtering/type-based/diacritics-neutralise.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/plug-ins/1.13.1/filtering/type-based/accent-neutralise.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <table id="ContasaPagar" class="table table-hover table-sm">
+        <thead>
+          <tr>
+
+            <th>Categoria</th>
+            <th>Descrição</th>
+            <th>Proprietário</th>
+            <th>Localização</th>
+            <th>Telefone</th>
+            <th>Quantidade</th>
+            <th>Endereço</th>          
+           <th>Ações</th>
+ 
+          
+          </tr>
+        </thead>
+
+
+        <tbody>
+         
+          Search for TABELAs:format as text
+        </tbody>
+      
+      </table>
+    </div>
+  </body>
+
+  <script>
+    $(document).ready(function () {
+      $.fn.dataTable.moment("DD/MM/YYYY");
+      var table = $("#ContasaPagar").DataTable({
+        lengthMenu: [
+          [10, 25, 50, 75, 100, -1],
+          [10, 25, 50, 75, 100, "Tudo"],
+        ],
+       // order: [[3, "asc"]],
+        select: true,
+        keys: true,
+        colReorder: true,
+        //**Plugin StateRestore**
+        stateSave: true,
+        //**end Plugin StateRestore**
+        //
+        //**Plugin Scroller**
+        deferRender: true,
+        //scroller:       true,
+        paging: true,
+        //**end Plugin Scroller**
+        //
+        //**Plugin Responsive**
+        responsive: true,
+        //**end Plugin Responsive**
+        //
+        //**Plugin FixedColumns**
+        scrollX: false,
+        scrollY: "400px",
+        scrollCollapse: true,
+        //fixedColumns: false,
+        //**end Plugin FixedColumns**
+        //
+        //** Plugin FixHeader**
+       fixedHeader: false,
+      /*  fixedHeader: {
+          header: false,
+          footer: true,
+        },*/
+        //** end Plugin FixedHeader**
+
+        dom: "Britlp",
+
+        language: {
+          emptyTable: "Nenhum registro encontrado",
+          info: "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+          infoEmpty: "Mostrando 0 até 0 de 0 registros",
+          infoFiltered: "(Filtrados de _MAX_ registros)",
+          infoThousands: ".",
+          loadingRecords: "Carregando...",
+          processing: "Processando...",
+          zeroRecords: "Nenhum registro encontrado",
+          search: "Pesquisar",
+          paginate: {
+            next: "Próximo",
+            previous: "Anterior",
+            first: "Primeiro",
+            last: "Último",
+          },
+          aria: {
+            sortAscending: ": Ordenar colunas de forma ascendente",
+            sortDescending: ": Ordenar colunas de forma descendente",
+          },
+          select: {
+            rows: {
+              1: "Selecionado 1 linha",
+              _: "Selecionado %d linhas",
+            },
+            cells: {
+              1: "1 célula selecionada",
+              _: "%d células selecionadas",
+            },
+            columns: {
+              1: "1 coluna selecionada",
+              _: "%d colunas selecionadas",
+            },
+          },
+          buttons: {
+            copySuccess: {
+              1: "Uma linha copiada com sucesso",
+              _: "%d linhas copiadas com sucesso",
+            },
+            collection:
+              'Coleção  <span class="ui-button-icon-primary ui-icon ui-icon-triangle-1-s"></span>',
+            colvis: "Visibilidade da Coluna",
+            colvisRestore: "Restaurar Visibilidade",
+            copy: "Copiar",
+            copyKeys:
+              "Pressione ctrl ou u2318 + C para copiar os dados da tabela para a área de transferência do sistema. Para cancelar, clique nesta mensagem ou pressione Esc..",
+            copyTitle: "Copiar para a Área de Transferência",
+            csv: "CSV",
+            excel: "Excel",
+            pageLength: {
+              "-1": "Mostrar todos os registros",
+              _: "Mostrar %d registros",
+            },
+            pdf: "PDF",
+            print: "Imprimir",
+            createState: "Criar estado",
+            removeAllStates: "Remover todos os estados",
+            removeState: "Remover",
+            renameState: "Renomear",
+            savedStates: "Estados salvos",
+            stateRestore: "Estado %d",
+            updateState: "Atualizar",
+          },
+          autoFill: {
+            cancel: "Cancelar",
+            fill: "Preencher todas as células com",
+            fillHorizontal: "Preencher células horizontalmente",
+            fillVertical: "Preencher células verticalmente",
+          },
+          lengthMenu: "Exibir _MENU_ resultados por página",
+          searchBuilder: {
+            add: "Adicionar Condição",
+            button: {
+              0: '<i class="fas fa-filter"></i>',
+              _: '<i class="fas fa-filter" style="color: #f44336;"></i> (%d)',
+            },
+            clearAll: "Limpar Tudo",
+            condition: "Condição",
+            conditions: {
+              date: {
+                after: "Depois",
+                before: "Antes",
+                between: "Entre",
+                empty: "Vazio",
+                equals: "Igual",
+                not: "Não",
+                notBetween: "Não Entre",
+                notEmpty: "Não Vazio",
+              },
+              number: {
+                between: "Entre",
+                empty: "Vazio",
+                equals: "Igual",
+                gt: "Maior Que",
+                gte: "Maior ou Igual a",
+                lt: "Menor Que",
+                lte: "Menor ou Igual a",
+                not: "Não",
+                notBetween: "Não Entre",
+                notEmpty: "Não Vazio",
+              },
+              string: {
+                contains: "Contém",
+                empty: "Vazio",
+                endsWith: "Termina Com",
+                equals: "Igual",
+                not: "Não",
+                notEmpty: "Não Vazio",
+                startsWith: "Começa Com",
+                notContains: "Não contém",
+                notStarts: "Não começa com",
+                notEnds: "Não termina com",
+              },
+              array: {
+                contains: "Contém",
+                empty: "Vazio",
+                equals: "Igual à",
+                not: "Não",
+                notEmpty: "Não vazio",
+                without: "Não possui",
+              },
+            },
+            data: "Data",
+            deleteTitle: "Excluir regra de filtragem",
+            logicAnd: "E",
+            logicOr: "Ou",
+            title: {
+              0: "Construtor de Pesquisa",
+              _: "Construtor de Pesquisa (%d)",
+            },
+            value: "Valor",
+            leftTitle: "Critérios Externos",
+            rightTitle: "Critérios Internos",
+          },
+          searchPanes: {
+            clearMessage: "Limpar Tudo",
+            collapse: {
+              0: '<i class="fa-solid fa-magnifying-glass-chart"></i>',
+              _: '<i class="fa-solid fa-magnifying-glass-chart" style="color: #f44336;"></i> (%d)',
+            },
+            count: "{total}",
+            countFiltered: "{shown} ({total})",
+            emptyPanes: "Nenhum Painel de Pesquisa",
+            loadMessage: "Carregando Painéis de Pesquisa...",
+            title: "Filtros Ativos",
+            showMessage: "Mostrar todos",
+            collapseMessage: "Fechar todos",
+          },
+          thousands: ".",
+          datetime: {
+            previous: "Anterior",
+            next: "Próximo",
+            hours: "Hora",
+            minutes: "Minuto",
+            seconds: "Segundo",
+            amPm: ["am", "pm"],
+            unknown: "-",
+            months: {
+              0: "Janeiro",
+              1: "Fevereiro",
+              2: "Março",
+              3: "Abril",
+              4: "Maio",
+              5: "Junho",
+              6: "Julho",
+              7: "Agosto",
+              8: "Setembro",
+              9: "Outubro",
+              10: "Novembro",
+              11: "Dezembro",
+            },
+            weekdays: [
+              "Domingo",
+              "Segunda-feira",
+              "Terça-feira",
+              "Quarta-feira",
+              "Quinte-feira",
+              "Sexta-feira",
+              "Sábado",
+            ],
+          },
+          editor: {
+            close: "Fechar",
+            create: {
+              button: "Novo",
+              submit: "Criar",
+              title: "Criar novo registro",
+            },
+            edit: {
+              button: "Editar",
+              submit: "Atualizar",
+              title: "Editar registro",
+            },
+            error: {
+              system:
+                'Ocorreu um erro no sistema (<a target="\\"rel="nofollow"href="\\">Mais informações</a>).',
+            },
+            multi: {
+              noMulti:
+                "Essa entrada pode ser editada individualmente, mas não como parte do grupo",
+              restore: "Desfazer alterações",
+              title: "Multiplos valores",
+              info: "Os itens selecionados contêm valores diferentes para esta entrada. Para editar e definir todos os itens para esta entrada com o mesmo valor, clique ou toque aqui, caso contrário, eles manterão seus valores individuais.",
+            },
+            remove: {
+              button: "Remover",
+              confirm: {
+                1: "Tem certeza que quer deletar 1 linha?",
+                _: "Tem certeza que quer deletar %d linhas?",
+              },
+              submit: "Remover",
+              title: "Remover registro",
+            },
+          },
+          decimal: ",",
+          stateRestore: {
+            creationModal: {
+              button: "Criar",
+              columns: {
+                search: "Busca de colunas",
+                visible: "Visibilidade da coluna",
+              },
+              name: "Nome:",
+              order: "Ordernar",
+              paging: "Paginação",
+              scroller: "Posição da barra de rolagem",
+              search: "Busca",
+              searchBuilder: "Mecanismo de busca",
+              select: "Selecionar",
+              title: "Criar novo estado",
+              toggleLabel: "Inclui:",
+            },
+            duplicateError: "Já existe um estado com esse nome",
+            emptyError: "Não pode ser vazio",
+            emptyStates: "Nenhum estado salvo",
+            removeConfirm: "Confirma remover %s?",
+            removeError: "Falha ao remover estado",
+            removeJoiner: "e",
+            removeSubmit: "Remover",
+            removeTitle: "Remover estado",
+            renameButton: "Renomear",
+            renameLabel: "Novo nome para %s:",
+            renameTitle: "Renomear estado",
+          },
+        },
+
+        buttons: [
+          {
+            extend: "collection",
+            text: '<i class="fa-solid fa-eye"></i>',
+            background: true,
+            autoClose: false,
+            //fade: 0,
+            align: "bottom-right",
+            buttons: ["columnsVisibility"],
+            titleAttr: "Ocultar/Desocultar",
+            className: "btn btn-dark",
+          },
+          {
+            extend: "copyHtml5",
+            text: '<i class="fa-solid fa-copy"></i> ',
+            titleAttr: "Copiar Dados",
+            className: "btn btn-secondary",
+            exportOptions: {
+              columns: ":visible",
+            },
+          },
+          {
+            extend: "excelHtml5",
+            text: '<i class="fas fa-file-excel"></i> ',
+            titleAttr: "Exportar a Excel",
+            autoFilter: true,
+            className: "btn btn-success",
+            exportOptions: {
+              columns: ":visible",
+            },
+          },
+          {
+            extend: "pdfHtml5",
+            text: '<i class="fa-solid fa-file-pdf"></i> ',
+            titleAttr: "Exportar para PDF",
+            orientation: "landscape",
+            className: "btn btn-danger",
+            exportOptions: {
+              columns: ":visible",
+            },
+          },
+          {
+            extend: "print",
+            text: '<i class="fa fa-print"></i> ',
+            titleAttr: "Imprimir",
+            className: "btn btn-info",
+            exportOptions: {
+              columns: ":visible",
+            },
+          },
+           {
+            extend: "csv",
+            text: '<i class="fa-solid fa-file-csv"></i> ',
+            titleAttr: "Exportar para CSV",
+charset: 'utf-8',
+ fieldSeparator: ';',
+        fieldBoundary: '',
+bom: true,
+            className: "btn btn-success",
+            exportOptions: {
+              columns: ":visible",
+stripHtml: false
+            },
+          },
+          {
+            extend: "searchBuilder",
+            titleAttr: "Busca Personalizada",
+            config: {
+              depthLimit: 2,
+            },
+          },
+          {
+            extend: "searchPanes",
+            titleAttr: "Painel de Busca",
+          },
+
+           {
+                 text: '<i class="fa-solid fa-plus"></i> ',
+                titleAttr: "Novo",
+                className: "btn btn-dark",
+action: function ( e, dt, node, config ) {
+                    window.parent.bubble_fn_workflow(["",'dt-new']);
+                }
+              },
+          {
+            text: ' <input class="form-control" type="text" id=buscadoratomico name="input" placeholder="Busca Atomica"> ',
+            titleAttr: "Busca Atomica",
+            className: "btn btn-light",
+          },
+        ],
+
+        initComplete: function (settings, json) {
+          $("#buscadoratomico ").on("keyup", function () {
+            table.search(this.value).draw();
+          });
+        },
+
+        drawCallback: function (row, data, start, end, max, display) {
+          var api = this.api();
+          // converting to interger to find total
+          var intVal = function (i) {
+            return typeof i === "string"
+              ? i.replace(/[\$,]/g, "") * 1
+              : typeof i === "number"
+              ? i
+              : 0;
+          };
+
+          /* computing column Total of the complete result
+          var monTotal = api
+            .column(4, { page: "current" })
+            .data()
+            .reduce(function (a, b) {
+              return intVal(a) + intVal(b);
+            }, 0);
+
+          var tueTotal = api
+            .column(6, { page: "current" })
+            .data()
+            .reduce(function (a, b) {
+              return intVal(a) + intVal(b);
+            }, 0);
+
+          var wedTotal = api
+            .column(7, { page: "current" })
+            .data()
+            .reduce(function (a, b) {
+              return intVal(a) + intVal(b);
+            }, 0);
+
+          // Update footer by showing the total with the reference of the column index
+
+          $(api.column(4).footer()).html(monTotal);
+          $(api.column(6).footer()).html(tueTotal.toFixed(3));
+          $(api.column(7).footer()).html(wedTotal);
+
+          // Atualizar botao contagem
+          // $("#contagem").text(pageTotal + " / " + total);*/
+
+          // desagrupar botoes
+          $("div.dataTables_wrapper>div ").removeClass("btn-group");
+        },
+      });
+    
+   /*View buttons
+	$('.dt-view').each(function () {
+		$(this).on('click', function(){
+			$this = $(this);
+			var dtRow = $this.parents('tr');
+			window.parent.bubble_fn_workflow([dtRow.attr('id'),'dt-view']);
+
+		});
+	});
+	
+    //Edit buttons
+	$('.dt-edit').each(function () {
+		$(this).on('click', function(){
+			$this = $(this);
+			var dtRow = $this.parents('tr');
+			window.parent.bubble_fn_workflow([dtRow.attr('id'),'dt-edit']);
+		});
+	});
+
+    //Copy buttons
+	$('.dt-copy').each(function () {
+		$(this).on('click', function(){
+			$this = $(this);
+			var dtRow = $this.parents('tr');
+			window.parent.bubble_fn_workflow([dtRow.attr('id'),'dt-copy']);
+		});
+	});
+
+    //Delete buttons
+	$('.dt-delete').each(function () {
+		$(this).on('click', function(){
+			$this = $(this);
+			var dtRow = $this.parents('tr');
+		window.parent.bubble_fn_workflow([dtRow.attr('id'),'dt-delete']);
+		});
+	});*/
+   
+    });
+  </script>
+</html>
